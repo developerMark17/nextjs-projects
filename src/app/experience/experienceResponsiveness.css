@@ -1,0 +1,70 @@
+/* experienceResponsiveness.css */
+
+/* Default styles for larger screens */
+.main-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .details {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  .main-div img {
+    width: 80%;
+    height: 100%;
+  }
+  
+  /* Styles for smaller screens */
+  @media only screen and (max-width: 768px) {
+    .main-div {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .main-div img {
+      width: 80%;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  
+    .details {
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .details li {
+        padding: 0 20px; /* Adjust padding as needed */
+    text-align: justify; 
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.6; /* Adjust line height as needed */
+    /* color: #666;  */
+    margin-bottom: 20px; /* Add margin below the content */
+    max-width: 800px; /* Adjust max width as needed */
+    margin-left: auto; 
+    font-family: sans-serif;
+  
+    }
+  
+    .intern {
+      list-style-type: decimal; /* Change list style */
+    }
+    .transform{
+        width: 50%;
+    }
+  }
+  
+  /* Styles for screens larger than 1200px */
+  @media only screen and (min-width: 1200px) {
+    .details li {
+      font-size: 20px; /* Increase font size */
+      padding: 0 40px; /* Adjust padding */
+      line-height: 2; /* Adjust line height */
+      max-width: 1000px; /* Increase max width */
+    }
+  }  

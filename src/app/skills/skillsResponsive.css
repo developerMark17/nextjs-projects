@@ -1,0 +1,38 @@
+.skillsRes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .top-image {
+    order: 1;
+    width: 100%;
+  }
+  
+  .skills-content {
+    order: 1;
+    width: 100%;
+    margin-left: 35px;
+  
+  }
+  
+  @media (min-width: 768px) {
+    .skillsRes {
+      flex-wrap: nowrap;
+    }
+  
+    .top-image {
+      order: 2;
+      /* width: 18rem; */
+      margin-top: 196px;
+      order: 2;
+      width: 38rem;
+    }
+  
+    .skills-content {
+      order: 1;
+      width: calc(100% - 18rem);
+    }
+  }
+  

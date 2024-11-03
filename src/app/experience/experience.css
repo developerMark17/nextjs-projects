@@ -1,0 +1,20 @@
+.details li{
+    font-size: medium;
+    padding: 0 20px; /* Adjust padding as needed */
+    text-align: justify; 
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.6; /* Adjust line height as needed */
+    /* color: #666;  */
+    margin-bottom: 20px; /* Add margin below the content */
+    max-width: 600px; /* Adjust max width as needed */
+    margin-left: auto; 
+    font-family: sans-serif;
+    list-style-type: auto;
+  
+}
+.intern{
+    list-style-type: upper-roman;
+}
+
+
+  
