@@ -1,17 +1,4 @@
-import {   javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
 
-  threejs, } from "../public/asset";
   
 const technologies = [
   {
@@ -67,14 +54,14 @@ const technologies = [
     name: "vs code",
     icon: "/asset/vscode.png",
   },
-  {
-    name: "socket",
-    icon: "/asset/socket.png",
-  },
-  {
-    name: "framer",
-    icon: "/asset/framer.png",
-  },
+  // {
+  //   name: "socket",
+  //   icon: "/asset/socket.png",
+  // },
+  // {
+  //   name: "framer",
+  //   icon: "/asset/framer.png",
+  // },
 
 ];
 
