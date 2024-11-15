@@ -58,7 +58,7 @@ export default async function Page({ params }) {
 
     return (
         <div className="max-w-6xl mx-auto p-4">
-            <h1 className="text-4xl font-bold mb-4 text-white">{data.title}</h1>
+            <h1 className="text-4xl font-bold mb-4 text-white mt-20">{data.title}</h1>
             <p className="text-base mb-2 border-l-4 border-gray-500 pl-4 italic text-white">
                 &quot;{data.description}&quot;
             </p>
@@ -68,9 +68,9 @@ export default async function Page({ params }) {
             </div>
             <div
                 dangerouslySetInnerHTML={{ __html: htmlContent }}
-                className="prose text-white"
+                className="prose prose-invert"
             ></div>
-            <OnThisPage htmlContent={htmlContent} />
+            <OnThisPage htmlContent={htmlContent}  />
         </div>
     );
 }

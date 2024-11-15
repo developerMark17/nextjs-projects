@@ -5,7 +5,7 @@
 import { useState,useRef,Suspense ,useEffect} from 'react';
 import { useTypewriter } from 'react-simple-typewriter';
 import '../app/style.css';
-import About from './about/page';
+import About from './About/about';
 import { TypewriterEffect } from '@/components/ui/typewriter-effect';
 import { SparklesCore } from '@/components/ui/sparkles';
 import { LampContainer } from '@/components/ui/lamp';
@@ -131,7 +131,7 @@ export default function Home() {
                     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                 }}>
  <div className="flex flex-col items-center justify-center w-full h-full bg-cover bg-center bg-no-repeat"  
-      style={{ backgroundImage: "url('/images/bg-3.jpg')" }}>
+      style={{ backgroundImage: "url('/images/bg-3.jpg')" }} id='home'>
      
  <Canvas 
       frameloop='demand'

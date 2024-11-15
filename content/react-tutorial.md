@@ -14,10 +14,6 @@ The main objective of ReactJS is to develop User Interfaces (UI) that improves t
 object), which improves the performance of the app. The JavaScript virtual DOM is faster than the regular DOM. We can use ReactJS
 on the client and server-side as well as with other frameworks. It uses component and data patterns that improve readability and
 helps to maintain larger apps.
-Reference:
-
-↥
-
 ### Q. How React works?
 
 React implements a virtual DOM that is basically a DOM tree representation in Javascript. So when it needs to read or write to the

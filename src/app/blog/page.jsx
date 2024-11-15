@@ -35,8 +35,8 @@ const Blog = () => {
 
   return (
     <div>
-      <div className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold mb-6">Blog</h1>
+      <div className="container mx-auto p-4 ">
+        <h1 className="text-3xl font-bold mb-6 mt-20">Blog</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {blogs.map((blog) => (
             <div key={blog.slug} className="rounded-lg shadow-lg overflow-hidden dark:border-2">
@@ -44,8 +44,8 @@ const Blog = () => {
               <div className="p-4">
                 <h2 className="text-xl font-semibold">{blog.title}</h2>
                 <p className="">{blog.description}</p>
-                <p className="text-sm">{`By ${blog.author} on ${new Date(blog.date).toLocaleDateString()}`}</p>
-                <Link className={buttonVariants({ variant: "outline" })} href={`/blogpost/${blog.slug}`}>Click here</Link>
+                <p className="text-sm mb-2">{`By ${blog.author} on ${new Date(blog.date).toLocaleDateString()}`}</p>
+                <Link className={buttonVariants({ variant: "secondary", })}  href={`/blogpost/${blog.slug}`}>Click here</Link>
               </div>
             </div>
           ))}
