@@ -1,13 +1,33 @@
 'use client'
-import { useState, useEffect } from 'react';
 
+import { useState, useEffect, useRef } from 'react';
+import { useInView } from 'framer-motion';
 import { CardContainer, CardBody, CardItem } from '@/components/ui/3d-card';
 import Project from '../projects/project';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import BallCanvas from '@/components/Ball/ball';
-import { technologies } from '../../../constants';
-import { Alert } from '@/components/ui/alert';
+
+// Define the skills data
+const skillsData = [
+  { name: 'HTML', icon: "/asset/tech/html.png" },
+  { name: 'CSS', icon: "/asset/tech/css.png" },
+  { name: 'Taiwind', icon: "/asset/tech/tailwind.png" },
+  { name: 'Bootstrap', icon: "/asset/tech/bootstrap.png" },
+  { name: 'JavaScript', icon: "/asset/tech/javascript.png" },
+  { name: 'TypeScript', icon: "/asset/tech/typescript.png" },
+  { name: 'Materail UI', icon: "/asset/tech/material.svg" },
+  { name: 'React', icon: "/asset/tech/react.png" },
+  { name: 'Redux', icon: "/asset/tech/redux.png" },
+  { name: 'Node Js', icon: "/asset/tech/nodejs.png", },
+  { name: 'Express Js', icon: "/asset/tech/expresss.webp", },
+  { name: 'MongoDB', icon: "/asset/tech/mongodb.png" },
+  { name: 'Git', icon: "/asset/tech/git.png" },
+  { name: 'Github', icon: "/asset/tech/github-2.png" },
+  { name: 'Java', icon: "/asset/tech/java.png" },
+  { name: 'Vs Code', icon: "/asset/tech/vscode.png" },
+  { name: 'Socket', icon: "/asset/tech/socket.png" },
+  { name: 'Framer', icon: "/asset/tech/framer.png", },
+
+  // Add more skills as needed
+];
 
 export default function Skills() {
     const [progress, setProgress] = useState(0);
@@ -30,10 +50,9 @@ export default function Skills() {
         };
     }, []);
 
-
-
     return (
         <div>
+            
             <hr className="h-1 bg-blue-900" />
             <h2 className="mx-3 flex justify-center text-lg sm:text-xl md:text-2xl lg:text-6xl">Skills</h2>
             <hr className="h-1 bg-blue-900" />
@@ -44,56 +63,42 @@ export default function Skills() {
             }}>
                 <div className="skillsRes">
                     <div className="top-image">
-                        <CardContainer className="inter-var top-image" ref={ref} style={{
-                            transform: isInView ? "none" : "translateX(-200px)",
-                            opacity: isInView ? 1 : 0,
-                            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-                        }}>
+                        <CardContainer className="inter-var top-image">
                             <CardBody className="bg-black-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-                                <CardItem
-                                    translateZ="50"
-                                    className="text-xl font-bold text-neutral-600 dark:text-white"
-                                >
-                                </CardItem>
-                                <CardItem
-                                    as="p"
-                                    translateZ="60"
-                                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-                                >
-                                </CardItem>
+                            
+                               
                                 <CardItem translateZ="100" className="w-full mt-4">
-                                    <img src="/images/logo.png" alt=""
+                                    <img src="/images/logo.png" alt="Skills Logo"
                                         height="1000"
                                         width="1000"
                                         className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                                     />
                                 </CardItem>
-                                <div className="flex justify-between items-center mt-20">
-                                    <CardItem
-                                        translateZ={20}
-                                        target="__blank"
-                                        className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-                                    >
-                                    </CardItem>
-                                    <CardItem
-                                        translateZ={20}
-                                        as="button"
-                                        className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-                                    >
-                                    </CardItem>
-                                </div>
                             </CardBody>
                         </CardContainer>
                     </div>
                
-                    <div className='flex flex-row flex-wrap justify-center gap-10'>
-      {technologies.map((technology) => (
-        <div className='w-28 h-28' key={technology.name}>
-          <BallCanvas icon={technology.icon} />
-        </div>
-      ))}
-    </div>
-             
+                    <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-10'>
+                        {skillsData.map((skill, index) => (
+                            <CardContainer key={index} className="inter-var">
+                                <CardBody className=" relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-gray-900 dark:border-white/[0.2] border-black/[0.1] w-full h-32 rounded-xl p-4 border">
+                                    <CardItem
+                                        translateZ="100"
+                                        className="w-full h-full flex flex-col items-center justify-center"
+                                    >
+                                        <img 
+                                            src={skill.icon} 
+                                            alt={`${skill.name} icon`}
+                                            className="w-16 h-16 object-contain mb-2"
+                                        />
+                                        <span className="text-sm font-medium text-center dark:text-white">
+                                            {skill.name}
+                                        </span>
+                                    </CardItem>
+                                </CardBody>
+                            </CardContainer>
+                        ))}
+                    </div>
                 </div>
             </section>
             <section>
@@ -102,3 +107,4 @@ export default function Skills() {
         </div>
     );
 }
+

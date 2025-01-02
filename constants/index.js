@@ -3,65 +3,65 @@
 const technologies = [
   {
     name: "HTML 5",
-    icon: "/asset/html.png",
+    icon: "/asset/tech/html.png",
   },
   {
     name: "CSS 3",
-    icon: "/asset/css.png",
+    icon: "/asset/tech/css.png",
   },
   {
     name: "JavaScript",
-    icon: "/asset/javascript.png",
+    icon: "/asset/tech/javascript.png",
   },
   {
     name: "TypeScript",
-    icon: "/asset/typescript.png",
+    icon: "/asset/tech/typescript.png",
   },
   {
     name: "React JS",
-    icon: "/asset/reactjs.png",
+    icon: "/asset/tech/reactjs.png",
   },
   {
     name: "Redux Toolkit",
-    icon: "/asset/redux.png",
+    icon: "/asset/tech/redux.png",
   },
   {
     name: "Tailwind CSS",
-    icon: "/asset/tailwind.png",
+    icon: "/asset/tech/tailwind.png",
   },
   {
     name: "Node JS",
-    icon: "/asset/nodejs.png",
+    icon: "/asset/tech/nodejs.png",
   },
   {
     name: "MongoDB",
-    icon: "/asset/mongodb.png",
+    icon: "/asset/tech/mongodb.png",
   },
   {
     name: "Three JS",
-    icon: "/asset/threejs.svg",
+    icon: "/asset/tech/threejs.svg",
   },
   {
     name: "git",
-    icon: "/asset/git.png",
+    icon: "/asset/tech/git.png",
   },
 
   {
     name: "java",
-    icon: "/asset/java.png",
+    icon: "/asset/tech/java.png",
   },
   {
     name: "vs code",
-    icon: "/asset/vscode.png",
+    icon: "/asset/tech/vscode.png",
   },
-  // {
-  //   name: "socket",
-  //   icon: "/asset/socket.png",
-  // },
-  // {
-  //   name: "framer",
-  //   icon: "/asset/framer.png",
-  // },
+  {
+    name: "socket",
+    icon: "/asset/tech/socket.png",
+  },
+  {
+    name: "framer",
+    icon: "/asset/tech/framer.png",
+  },
 
 ];
 

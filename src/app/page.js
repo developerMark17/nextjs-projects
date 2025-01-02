@@ -5,7 +5,7 @@
 import { useState,useRef,Suspense ,useEffect} from 'react';
 import { useTypewriter } from 'react-simple-typewriter';
 import '../app/style.css';
-import About from './About/about';
+import About from './about/page';
 import { TypewriterEffect } from '@/components/ui/typewriter-effect';
 import { SparklesCore } from '@/components/ui/sparkles';
 import { LampContainer } from '@/components/ui/lamp';
@@ -23,7 +23,7 @@ function Computers({isMobile}){
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black'   />
+      <hemisphereLight intensity={4} groundColor='black'   />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -32,7 +32,7 @@ function Computers({isMobile}){
         castShadow
         shadow-mapSize={1024}
       />
-      <pointLight intensity={1} />
+      <pointLight intensity={2} />
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.7 :1.5}
@@ -97,17 +97,10 @@ export default function Home() {
       className: "text-blue-500 text-white"
     },
     {
-      text: "Mark",
+      text: "Airaz",
       className: "text-blue-500 text-white"
     },
-    {
-      text: "Iam ",
-      className: "text-blue-500 text-white"
-    },
-    {
-      text: "a.",
-      className: "text-blue-500 text-white"
-    },
+   
   ];
 
   const [text] = useTypewriter({
@@ -131,7 +124,7 @@ export default function Home() {
                     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
                 }}>
  <div className="flex flex-col items-center justify-center w-full h-full bg-cover bg-center bg-no-repeat"  
-      style={{ backgroundImage: "url('/images/bg-3.jpg')" }} id='home'>
+      id='home'>
      
  <Canvas 
       frameloop='demand'
@@ -139,7 +132,7 @@ export default function Home() {
       dpr={[1, 2]}
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
-     style={{height:"300px"}}>
+     style={{height:"300px",marginTop:'100px'}}>
       <Suspense fallback={<Loader/>}>
         <OrbitControls
           enableZoom={false}
@@ -151,7 +144,10 @@ export default function Home() {
 
       <Preload all />
     </Canvas>
-      <TypewriterEffect words={firstLineWords} />
+    <div>
+
+      <TypewriterEffect words={firstLineWords} className='mb-10 mt-10'/>
+    </div>
           <div className="text-blue-500 dark:text-blue-500 text-xl md:text-3xl lg:text-5xl font-bold">
             {text}
             <span className="inline-block bg-blue-500 h-5 md:h-10 w-[4px] ml-1 animate-blink"></span>
