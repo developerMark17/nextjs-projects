@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://markcoder.tech
+
+# Sitemaps
+Sitemap: https://markcoder.tech/sitemap.xml

@@ -25,26 +25,26 @@ export function Navbar() {
       icon: (
         <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#about",
+      href: "/#about",
     },
     {
       title: "Experience",
       icon: (
         <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#experience",
+      href: "/#experience",
     },
     {
       title: "Skills",
-      href: "#skills",
+      href: "/#skills",
     },
     {
       title: "Projects",
-      href: "#project",
+      href: "/#project",
     },
     {
       title: "Contact",
-      href: "#contact",
+      href: "/#contact",
     },
     {
       title: "Blog",

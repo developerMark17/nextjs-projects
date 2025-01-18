@@ -30,6 +30,66 @@ return data
 //   },
 //   // Add more blog objects as needed
 // ];
+export const metadata = {
+  metadataBase: new URL("https://markcoder.tech"), // Replace with your blog's actual domain
+  title: "Markcoder's Blog",
+  description:
+    "Dive into Markcoder's blog featuring insightful articles on full-stack development, React, Next.js, JavaScript, and creative UI/UX design. Discover tips, tutorials, and industry trends.",
+  icons: "/images/blog-fav.webp",
+  generator: "Airaz Khan",
+  applicationName: "Markcoder's Blog",
+  referrer: "origin-when-cross-origin",
+  keywords: [
+    "Blog",
+    "Web Development",
+    "React",
+    "Next.js",
+    "JavaScript",
+    "UI/UX Design",
+    "Full-Stack Development",
+    "Programming",
+    "Tutorials",
+    "Industry Trends",
+  ],
+  authors: [
+    { name: "Markcoder", url: "https://markcoderblog.com" },
+    { name: "Airaz Khan" },
+  ],
+  creator: "Markcoder",
+  publisher: "Markcoder Publishing",
+  openGraph: {
+    title: "Markcoder's Blog",
+    description:
+      "Explore articles, tips, and tutorials on full-stack development, React, Next.js, JavaScript, and more.",
+    url: "https://markcoder.tech", // Replace with your blog's URL
+    type: "website",
+    images: [
+      {
+        url: "/images/blog-og-image.png", // Replace with the actual path to your OpenGraph image
+        width: 1200,
+        height: 630,
+        alt: "Markcoder's Blog Open Graph Image",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@yourtwitterhandle", // Replace with your Twitter handle
+    creator: "@yourtwitterhandle", // Replace with your Twitter handle
+    title: "Markcoder's Blog",
+    description:
+      "Discover insightful articles on full-stack development, React, JavaScript, and more.",
+    images: ["/images/twitter-blog-card.png"], // Replace with your Twitter card image path
+  },
+};
+
+export const viewport = {
+  themeColor: "#ffffff", // Set a light theme color for better readability
+  colorScheme: "light", // Specify the light color scheme
+  viewport: "width=device-width, initial-scale=1.0", // Define the viewport for responsive design
+};
+
+
 const Blog = () => {
  
 
