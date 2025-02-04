@@ -2,16 +2,17 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar/navbar";
 import { Footer } from "./footer/footer";
+import SplashCursor from "@/Animations/SplashCursor/SplashCursor";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   metadataBase: new URL("https://markcoder.tech"), // Replace with your actual domain
-  title: "Markcoder's Blog",
+  title: "Markcoder's Portfolio",
   description:
     "Dive into Markcoder's blog featuring insightful articles on full-stack development, React, Next.js, JavaScript, and creative UI/UX design. Discover tips, tutorials, and industry trends.",
-  icons: "/images/blog-icon.png",
-  generator: "Markjs",
+  icons: "/images/angular.png",
+  generator: "Mark ",
   applicationName: "Markcoder's Blog",
   referrer: "origin-when-cross-origin",
   keywords: [
@@ -27,8 +28,9 @@ export const metadata = {
     "Industry Trends",
   ],
   authors: [
-    { name: "Markcoder", url: "https://markcoderblog.com" },
-    { name: "Sebastian Markbåge" },
+    { name: "Markcoder", url: "https://markcoder.tech" },
+    
+    { name: "Airaz Khan" },
   ],
   creator: "Markcoder",
   publisher: "Markcoder Publishing",
@@ -36,14 +38,14 @@ export const metadata = {
     title: "Markcoder's Blog",
     description:
       "Explore articles, tips, and tutorials on full-stack development, React, Next.js, JavaScript, and more.",
-    url: "https://markcoderblog.com",
+    url: "https://markcoder.tech",
     type: "website",
     images: [
       {
         url: "/images/blog-og-image.png",
         width: 1200,
         height: 630,
-        alt: "Markcoder's Blog",
+        alt: "Markcoder's Portfolio",
       },
     ],
   },
@@ -70,6 +72,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
     
       <body className={inter.className}>
+        <SplashCursor />
         <Navbar />
         {children}
         <Footer />

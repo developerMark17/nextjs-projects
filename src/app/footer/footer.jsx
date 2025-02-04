@@ -2,7 +2,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export function Footer() {
   return (
-    <footer className="bg-black text-white py-8 mt-32">
+    <footer className="bg-black text-white py-8 mt-64">
       <div className="container mx-auto px-4">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 mt-10">
@@ -55,6 +55,15 @@ export function Footer() {
 
           {/* Social Media Icons */}
           <div className="flex space-x-4">
+          <a
+      href="https://wa.me/9984400856"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:text-gray-400 transition-colors duration-300 text-lg"
+      
+    >
+     <i class="fa-brands fa-whatsapp"></i>
+    </a>
             <a
               href="https://github.com/developerMark17"
               target="_blank"

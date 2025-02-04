@@ -118,7 +118,7 @@ export default function Home() {
 
   return (
 <main className="flex flex-col items-center justify-between h-auto ">
- <div className=" w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md h-screen" ref={ref} style={{
+ <div className=" w-full flex flex-col items-center justify-center overflow-hidden rounded-md h-screen" ref={ref} style={{
                     transform: isInView ? "none" : "translateX(-200px)",
                     opacity: isInView ? 1 : 0,
                     transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
@@ -146,15 +146,15 @@ export default function Home() {
     </Canvas>
     <div>
 
-      <TypewriterEffect words={firstLineWords} className='mb-10 mt-10'/>
+      <TypewriterEffect words={firstLineWords} className='mb-10 mt-10 firstLine'/>
     </div>
-          <div className="text-blue-500 dark:text-blue-500 text-xl md:text-3xl lg:text-5xl font-bold">
+          <div className="text-blue-500 dark:text-blue-500 text-xl md:text-3xl lg:text-5xl font-bold textTypewriter">
             {text}
             <span className="inline-block bg-blue-500 h-5 md:h-10 w-[4px] ml-1 animate-blink"></span>
           </div>
    
    </div>
-   
+  
 
      
           

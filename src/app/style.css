@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
 .first-section{
     display: flex;
     justify-content: space-around;
@@ -9,7 +9,15 @@
 .left-section{
    width: 30%;
 }
+.firstLine{
+    font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
 
+}
+.textTypewriter{
+    font-family: robot;
+  
+  }
 .first-sent{
     font-optical-sizing: auto;
     font-weight: 500;

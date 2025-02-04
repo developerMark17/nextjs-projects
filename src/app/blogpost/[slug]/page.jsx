@@ -13,6 +13,7 @@ import { transformerCopyButton } from "@rehype-pretty/transformers";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import OnThisPage from "@/components/ui/onThisPage";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 // Metadata for the blog post page
 export async function generateMetadata({ params }) {
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }) {
 
   if (!fs.existsSync(filepath)) {
     return {
-      metadataBase: new URL("https://markcoder.tech"), // Replace with your domain
+      metadataBase: new URL("https://markcoder.tech/blogpost"), // Replace with your domain
       title: "Page Not Found",
       description: "The requested blog post could not be found.",
     };
@@ -30,14 +31,14 @@ export async function generateMetadata({ params }) {
   const { data } = matter(fileContent);
 
   return {
-    metadataBase: new URL("https://markcoder.tech"), // Replace with your domain
+    metadataBase: new URL("https://markcoder.tech/blogpost"), // Replace with your domain
     title: `${data.title} | Markcoder's Blog`,
     description: data.description || "Explore this blog post on Markcoder's Blog",
     icons: data.image,
     openGraph: {
       title: data.title,
       description: data.description,
-      url: `https://markcoder.tech/${params.slug}`, // Replace with your domain
+      url: `https://markcoder.tech/blogpost/${params.slug}`, // Replace with your domain
       type: "article",
       images: [
         {
@@ -109,10 +110,14 @@ export default async function Page({ params }) {
         <h1 className="text-sm text-white italic">By {data.author}</h1>
         <p className="text-sm text-white">{data.date}</p>
       </div>
+      <ScrollArea className="h-screen md:w-10/12 p-4">
+
       <div
         dangerouslySetInnerHTML={{ __html: htmlContent }}
         className="prose prose-invert"
-      ></div>
+        ></div>
+        </ScrollArea>
+      
       <OnThisPage htmlContent={htmlContent} />
     </div>
   );
