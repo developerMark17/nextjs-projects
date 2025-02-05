@@ -130,7 +130,7 @@ export default function Project() {
             <CardItem translateZ="100" rotateX={20} rotateZ={-10}>
               <Card className="mt-6 bg-transparent border-none shadow-none">
                 <CardHeader>
-                  <CardTitle className="text-white">Video Player</CardTitle>
+                  <CardTitle className="text-white">3d Model Website</CardTitle>
                 </CardHeader>
                 <CardContent className="text-gray-300 space-y-4">
                   <p>
